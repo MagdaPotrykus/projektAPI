@@ -15,3 +15,5 @@ mode - model -50
 pojemność - capitality - 5
 rok produkcji - production - 4
 moc silnika - engine - 50
+vin - vin - 17
+przebieg - mileage - 6
