@@ -1,1 +1,9 @@
+1) 
+Nomenklatura:
+klient:
+
+imie- name
+nazwisko- surname
+tell- phone
+email-email
 
