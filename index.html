@@ -26,9 +26,9 @@
                     <li><a class="nav-link" >O NAS</a></li>
                     <li><a class="nav-link" >KONTAKT</a></li>
                     <li><a class="nav-link" >BLOG</a></li>
-                    <li>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ZAREZERWUJ WIZYTĘ</button>
-                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li><button class="ml-auto btn btn-outline-success my-2 my-sm-0" type="submit">ZAREZERWUJ WIZYTĘ</button></li>
                 </ul>
             <form class="form-inline my-2 my-lg-0 ml-auto">
                 <input class="form-control mr-sm-2" type="search" placeholder="Wyszukaj" aria-label="Search">
@@ -65,7 +65,7 @@
                   <label for="phone" class="form-label">Telefon</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text">+48</span>
-                    <input type="number" class="form-control" id="phone" placeholder="Wprowadź swój numer telefonu" required>
+                    <input type="tel" class="form-control" id="phone" placeholder="Wprowadź swój numer telefonu" required>
                   <div class="invalid-feedback">Your username is required.</div>
                   </div>
                 </div>
@@ -88,7 +88,101 @@
                 
                 <div class="col-sm-6 my-4">
                   <label for="mark" class="form-label">Marka</label>
-                  <input type="text" class="form-control" id="mark" placeholder="Wprowadź markę pojazdu" value="" required>
+                  <select id="mark" name="mark" class="form-control">
+                    <option value="opt" selected="" disabled="disabled">Wybierz markę pojazdu</option>
+                    <optgroup label="Popularne marki">
+                      <option value="alfa-romeo">Alfa Romeo</option>
+                      <option value="audi">Audi</option>
+                      <option value="bmw">BMW</option>
+                      <option value="dacia">Dacia</option>
+                      <option value="daewoo">Daewoo</option>
+                      <option value="ferrari">Ferrari</option>
+                      <option value="fiat">Fiat</option>
+                      <option value="ford">Ford</option>
+                      <option value="honda">Honda</option>
+                      <option value="hummer">Hummer</option>
+                      <option value="hyundai">Hyundai</option>
+                      <option value="jaguar">Jaguar</option>
+                      <option value="jeep">Jeep</option>
+                      <option value="kia">Kia</option>
+                      <option value="land-rover">Land Rover</option>
+                      <option value="lexus">Lexus</option>
+                      <option value="mazda">Mazda</option>
+                      <option value="mercedes-benz">Mercedes-Benz</option>
+                      <option value="nissan">Nissan</option>
+                      <option value="opel">Opel</option>
+                      <option value="peugeot">Peugeot</option>
+                      <option value="porsche">Porsche</option>
+                      <option value="renault">Renault</option>
+                      <option value="rolls-royce">Rolls-Royce</option>
+                      <option value="seat">SEAT</option>
+                      <option value="skoda">Skoda</option>
+                      <option value="toyota">Toyota</option>
+                      <option value="trabant">Trabant</option>
+                      <option value="uaz">Uaz</option>
+                      <option value="volkswagen">Volkswagen</option>
+                      <option value="volvo/">Volvo</option>
+                      <option value="wartburg">Wartburg</option>
+                  </optgroup>
+                  <optgroup label="Mniej znane marki">
+                      <option value="acura">Acura</option>
+                      <option value="aston-martin">Aston Martin</option>
+                      <option value="austin">Austin</option>
+                      <option value="avia">Avia</option>
+                      <option value="bentley">Bentley</option>
+                      <option value="buick">Buick</option>
+                      <option value="cadillac">Cadillac</option>
+                      <option value="chevrolet">Chevrolet</option>
+                      <option value="chrysler">Chrysler</option>
+                      <option value="citroen">Citroen</option>
+                      <option value="daihatsu">Daihatsu</option>
+                      <option value="dodge">Dodge</option>
+                      <option value="eagle">Eagle</option>
+                      <option value="fs-lublin">FS Lublin</option>
+                      <option value="fsm">FSM</option>
+                      <option value="fso">FSO</option>
+                      <option value="fsr">FSR</option>
+                      <option value="fsr">FSR</option>
+                      <option value="gaz">Gaz</option>
+                      <option value="gmc">GMC</option>
+                      <option value="infiniti">Infiniti</option>
+                      <option value="innocenti">Innocenti</option>
+                      <option value="intrall">Intrall</option>
+                      <option value="isuzu">Isuzu</option>
+                      <option value="iveco">Iveco</option>				
+                      <option value="jmc">JMC</option>				
+                      <option value="lada">Lada</option>
+                      <option value="lamborghini">Lamborghini</option>
+                      <option value="lancia">Lancia</option>
+                      <option value="ldv">LDV</option>
+                      <option value="lincoln">Lincoln</option>
+                      <option value="lotus">Lotus</option>
+                      <option value="lti">LTI</option>
+                      <option value="maruti">Maruti</option>
+                      <option value="maserati">Maserati</option>
+                      <option value="mercury">Mercury</option>
+                      <option value="mg">MG</option>
+                      <option value="mini">MINI</option>
+                      <option value="mitsubishi">Mitsubishi</option>
+                      <option value="moskwicz">Moskwicz</option>
+                      <option value="oldsmobile">Oldsmobile</option>
+                      <option value="oltcit">Oltcit</option>
+                      <option value="plymouth">Plymouth</option>
+                      <option value="pontiac">Pontiac</option>
+                      <option value="rover">Rover</option>
+                      <option value="saab">Saab</option>
+                      <option value="saturn">Saturn</option>
+                      <option value="scion">Scion</option>
+                      <option value="smart">Smart</option>
+                      <option value="ssangyong">Ssangyong</option>
+                      <option value="subaru">Subaru</option>
+                      <option value="suzuki">Suzuki</option>
+                      <option value="talbot">Talbot</option>
+                      <option value="tata">Tata</option>
+                      <option value="yugo">Yugo</option>
+                      <option value="zaz-zaporozec">ZAZ Zaporożec</option>
+                  </optgroup>
+                  </select>
                   <div class="invalid-feedback">Valid mark name is required.</div>
                 </div>
       
@@ -106,7 +200,7 @@
       
                 <div class="col-sm-6 my-4">
                   <label for="production" class="form-label">Rok produkcji</label>
-                  <input type="text" class="form-control" id="production" placeholder="Wprowadź rok produkcji" value="" required>
+                  <input type="number" min="1950" max="2025" step="1" class="form-control" id="production" placeholder="Wprowadź rok produkcji" value="" required>
                   <div class="invalid-feedback">Valid production year is required.</div>
                 </div>
       
@@ -133,14 +227,41 @@
               <div class="row g-3">
                 <div class="col-12">
                   <label for="services" class="form-label">Zakres obsługi</label>
-                  <input type="text" class="form-control" id="services" placeholder="tu będzie dodany zakres wykonywanych usług lista (później)">
-                  <textarea name="comments" id="comments_id" placeholder="Inne uwagi"></textarea>
+                  <select id="services" name="services" class="form-control">
+                    <option value="opt0" selected="" disabled="disabled">-- wybierz usługę serwisową --</option>
+                    <option value="opt1">PRZEGLĄD SERWISOWY</option>
+                    <option value="opt2">PRZEGLĄD OKRESOWY WEDŁUG CZYNNOŚCI KARTY PRZEGLĄDOWEJ PO KONKRETNYM PRZEBIEGU LUB COROCZNY</option>
+                    <option value="opt3">WYMIANA ROZRZĄDU</option>
+                    <option value="opt4">WYMIANA SPRZĘGŁA</option>
+                    <option value="opt5">NAPRAWA ELEMENTÓW ZAWIESZENIA</option>
+                    <option value="opt6">NAPRAWA PODZESPOŁÓW ELEKTRYCZNYCH</option>
+                    <option value="opt7">WYMIANA OPON</option>
+                    <option value="opt8">WYMIANA KLOCKÓW HAMULCOWYCH LUB TARCZ</option>
+                    <option value="opt9">WYMIANA OLEJU</option>
+                    <option value="opt10">NAPRAWA BLACHARSKO - LAKIERNICZA</option>
+                    <option value="opt11">INNE USTERKI</option>
+                    </select>
+                  <textarea class="col-12 my-4" id="comments" placeholder="Inne uwagi"></textarea>
                   <div class="invalid-feedback">Please choose.</div>
                 </div>
               </div>
-      
+
               <hr class="my-4">
-              <p>tu będzie dodany kalendarz (później)</p>
+              <p>Wybierz najbardziej odpowiedni dla Ciebie termin wizyty</p>
+              <div class="row g-3">
+                <div class="col-sm-6 my-4">
+                  <label for="day" class="form-label">Dzień</label>
+                  <input type="date" class="form-control" id="day" value="" required>
+                  <div class="invalid-feedback">Valid day is required.</div>
+                </div>
+
+                <div class="col-sm-6 my-4">
+                  <label for="time" class="form-label">Godzina</label>
+                  <input type="time" min="08:00" max="19:00" class="form-control" id="time" value="08:00" required>
+                  <div class="invalid-feedback">Valid time is required.</div>
+                </div>
+              </div>
+
               <button class="btn btn-outline-success my-2 my-sm-0 w-100 btn-lg" type="submit">REZERWUJ</button>
       
             </form>
