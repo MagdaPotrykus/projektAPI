@@ -13,44 +13,72 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">AUTOSERWIS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" >AKTUALNOŚCI</a>
-                </li>
-                <li>
-                    <a class="nav-link" >OFERTA</a>
-                </li>
-                <li>
-                    <a class="nav-link" >SERWIS</a>
-                </li>
-                <li>
-                    <a class="nav-link" >LAKIERNIA</a>
-                </li>
-                <li>
-                    <a class="nav-link" >MYJNIA</a>
-                </li>
-                <li>
-                    <a class="nav-link" >O NAS</a>
-                </li>
-                <li>
-                    <a class="nav-link" >KONTAKT</a>
-                </li>
-                <li>
-                    <a class="nav-link" >BLOG</a>
-                </li>
-                <li>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ZAREZERWUJ WIZYTĘ</button>
-                </li>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" >AKTUALNOŚCI</a></li>
+                    <li><a class="nav-link" >OFERTA</a></li>
+                    <li><a class="nav-link" >SERWIS</a></li>
+                    <li><a class="nav-link" >LAKIERNIA</a></li>
+                    <li><a class="nav-link" >MYJNIA</a></li>
+                    <li><a class="nav-link" >O NAS</a></li>
+                    <li><a class="nav-link" >KONTAKT</a></li>
+                    <li><a class="nav-link" >BLOG</a></li>
+                    <li>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ZAREZERWUJ WIZYTĘ</button>
+                    </li>
                 </ul>
             <form class="form-inline my-2 my-lg-0 ml-auto">
                 <input class="form-control mr-sm-2" type="search" placeholder="Wyszukaj" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">WYSZUKAJ</button>
             </form>
             </div>
-          </nav>
+        </nav>
     </header>
+    <!-- formularz zgłoszenia -->
+    <form>
+        <h1>Rezerwacja</h1>
+        <p>Dane podstawowe</p>
+        <div class="form-group">
+            <label for="name_id">Imię</label><br>
+            <input type="text" name="name" id="name_id"><br>
+
+            <label for="surname_id">Nazwisko</label><br>
+            <input type="text" name="surname" id="surname_id"><br>
+
+            <label for="phone_id">Telefon</label><br>
+            <input type="text" name="phone" id="phone_id"><br>
+        
+            <label for="email_id">Email</label><br>
+            <input type="text" name="email" id="email_id"><br>
+        </div>
+        <p>Dane pojazdu</p>
+        <div class="form-group">
+            <label for="registration_id">Numer rejestracyjny</label><br>
+            <input type="text" name="registration" id="registration_id"><br>
+
+            <label for="mark_id">Marka</label><br>
+            <input type="text" name="mark" id="mark_id"><br>
+
+            <label for="model_id">Model</label><br>
+            <input type="text" name="model" id="model_id"><br>
+
+            <label for="capitality_id">Pojemność</label><br>
+            <input type="text" name="capitality" id="capitality_id"><br>
+
+            <label for="production_id">Rok produkcji</label><br>
+            <input type="text" name="production" id="production_id"><br>
+
+            <label for="engine_id">Moc silnika</label><br>
+            <input type="text" name="engine" id="engine_id"><br>
+
+            <label for="vin_id">Nr rej./VIN</label><br>
+            <input type="text" name="vin" id="vin_id"><br>
+
+            <label for="mileage_id">Przebieg</label><br>
+            <input type="text" name="mileage" id="mileage_id"><br>
+        </div>
+    </form>
 </body>
 </html>
