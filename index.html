@@ -51,13 +51,13 @@
       
                 <div class="col-sm-6">
                   <label for="name" class="form-label">Imię</label>
-                  <input type="text" class="form-control" id="name" placeholder="Wprowadź swoje imię" value="" required>
+                  <input type="text" class="form-control" id="name" size="20" placeholder="Wprowadź swoje imię" value="" required>
                   <div class="invalid-feedback">Wprowadź swoje imię!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="surname" class="form-label">Nazwisko</label>
-                  <input type="text" class="form-control" id="surname" placeholder="Wprowadź swoje nazwisko" value="" required>
+                  <input type="text" class="form-control" id="surname" size="50" placeholder="Wprowadź swoje nazwisko" value="" required>
                   <div class="invalid-feedback">Wprowadź swoje nazwisko!</div>
                 </div>
       
@@ -65,7 +65,7 @@
                   <label for="phone" class="form-label">Telefon</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text">+48</span>
-                    <input type="tel" class="form-control" id="phone" placeholder="Wprowadź swój numer telefonu" required>
+                    <input type="tel" class="form-control" id="phone" size="15" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="601 102 203" required>
                   <div class="invalid-feedback">Wprowadź swój numer telefonu!</div>
                   </div>
                 </div>
@@ -76,20 +76,20 @@
                 
                 <div class="col-12">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="jan.kowalski@domena.pl" required>
+                  <input type="email" class="form-control" id="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" size="100" placeholder="jan.kowalski@domena.pl" required>
                   <div class="invalid-feedback">Podaj swój adres email!</div>
                 </div>
       
                 <div class="col-sm-6 my-4">
                   <label for="registration" class="form-label">Numer rejestracyjny</label>
-                  <input type="text" class="form-control" id="registration" placeholder="Wprowadź numer rejestracyjny pojazdu" value="" required>
+                  <input type="text" class="form-control" id="registration" size="7" placeholder="Wprowadź numer rejestracyjny pojazdu" value="" required>
                   <div class="invalid-feedback">Wprowadź numer rejestracyjny pojazdu!</div>
                 </div>
                 
                 <div class="col-sm-6 my-4">
                   <label for="mark" class="form-label">Marka</label>
                   <select id="mark" name="mark" class="form-control" required>
-                    <option value="opt" selected="" disabled="disabled">Wybierz markę pojazdu</option>
+                    <option value="" selected="" disabled="disabled">Wybierz markę pojazdu</option>
                     <optgroup label="Popularne marki">
                       <option value="alfa-romeo">Alfa Romeo</option>
                       <option value="audi">Audi</option>
@@ -188,13 +188,13 @@
       
                 <div class="col-sm-6">
                   <label for="model" class="form-label">Model</label>
-                  <input type="text" class="form-control" id="model" placeholder="Wprowadź model pojazdu" value="" required>
+                  <input type="text" class="form-control" id="model" size="50" placeholder="Wprowadź model pojazdu" value="" required>
                   <div class="invalid-feedback">Wprowadź model pojazdu!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="capitality" class="form-label">Pojemność</label>
-                  <input type="text" class="form-control" id="capitality" placeholder="Wprowadź pojemność" value="" required>
+                  <input type="text" class="form-control" id="capitality" size="5" placeholder="Wprowadź pojemność" value="" required>
                   <div class="invalid-feedback">Wprowadź pojemność!</div>
                 </div>
       
@@ -206,19 +206,19 @@
       
                 <div class="col-sm-6 my-4">
                   <label for="engine" class="form-label">Moc silnika</label>
-                  <input type="text" class="form-control" id="engine" placeholder="Wprowadź moc silnika" value="" required>
+                  <input type="text" class="form-control" id="engine" size="50" placeholder="Wprowadź moc silnika" value="" required>
                   <div class="invalid-feedback">Wprowadź moc silnika!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="vin" class="form-label">VIN</label>
-                  <input type="text" class="form-control" id="vin" placeholder="Wprowadź VIN" value="" required>
+                  <input type="text" class="form-control" id="vin" size="17" placeholder="Wprowadź VIN" value="" required>
                   <div class="invalid-feedback">Wprowadź VIN!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="mileage" class="form-label">Przebieg</label>
-                  <input type="text" class="form-control" id="mileage" placeholder="Podaj przebieg pojazdu" value="" required>
+                  <input type="text" class="form-control" id="mileage" size="6" placeholder="Podaj przebieg pojazdu" value="" required>
                   <div class="invalid-feedback">Podaj przebieg pojazdu!</div>
                 </div>
               </div>
@@ -228,7 +228,7 @@
                 <div class="col-12">
                   <label for="services" class="form-label">Zakres obsługi</label>
                   <select id="services" name="services" class="form-control" required>
-                    <option value="opt0" selected="" disabled="disabled">-- wybierz usługę serwisową --</option>
+                    <option value="" selected="" disabled="disabled">-- wybierz usługę serwisową --</option>
                     <option value="opt1">PRZEGLĄD SERWISOWY</option>
                     <option value="opt2">PRZEGLĄD OKRESOWY WEDŁUG CZYNNOŚCI KARTY PRZEGLĄDOWEJ PO KONKRETNYM PRZEBIEGU LUB COROCZNY</option>
                     <option value="opt3">WYMIANA ROZRZĄDU</option>
