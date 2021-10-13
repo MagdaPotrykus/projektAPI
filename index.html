@@ -52,13 +52,13 @@
                 <div class="col-sm-6">
                   <label for="name" class="form-label">Imię</label>
                   <input type="text" class="form-control" id="name" placeholder="Wprowadź swoje imię" value="" required>
-                  <div class="invalid-feedback">Valid first name is required.</div>
+                  <div class="invalid-feedback">Wprowadź swoje imię!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="surname" class="form-label">Nazwisko</label>
                   <input type="text" class="form-control" id="surname" placeholder="Wprowadź swoje nazwisko" value="" required>
-                  <div class="invalid-feedback">Valid last name is required.</div>
+                  <div class="invalid-feedback">Wprowadź swoje nazwisko!</div>
                 </div>
       
                 <div class="col-12 my-4">
@@ -66,7 +66,7 @@
                   <div class="input-group has-validation">
                     <span class="input-group-text">+48</span>
                     <input type="tel" class="form-control" id="phone" placeholder="Wprowadź swój numer telefonu" required>
-                  <div class="invalid-feedback">Your username is required.</div>
+                  <div class="invalid-feedback">Wprowadź swój numer telefonu!</div>
                   </div>
                 </div>
       
@@ -76,19 +76,19 @@
                 
                 <div class="col-12">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="jan.kowalski@domena.pl">
-                  <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
+                  <input type="email" class="form-control" id="email" placeholder="jan.kowalski@domena.pl" required>
+                  <div class="invalid-feedback">Podaj swój adres email!</div>
                 </div>
       
                 <div class="col-sm-6 my-4">
                   <label for="registration" class="form-label">Numer rejestracyjny</label>
                   <input type="text" class="form-control" id="registration" placeholder="Wprowadź numer rejestracyjny pojazdu" value="" required>
-                  <div class="invalid-feedback">Valid registration number is required.</div>
+                  <div class="invalid-feedback">Wprowadź numer rejestracyjny pojazdu!</div>
                 </div>
                 
                 <div class="col-sm-6 my-4">
                   <label for="mark" class="form-label">Marka</label>
-                  <select id="mark" name="mark" class="form-control">
+                  <select id="mark" name="mark" class="form-control" required>
                     <option value="opt" selected="" disabled="disabled">Wybierz markę pojazdu</option>
                     <optgroup label="Popularne marki">
                       <option value="alfa-romeo">Alfa Romeo</option>
@@ -183,43 +183,43 @@
                       <option value="zaz-zaporozec">ZAZ Zaporożec</option>
                   </optgroup>
                   </select>
-                  <div class="invalid-feedback">Valid mark name is required.</div>
+                  <div class="invalid-feedback">Wybierz markę pojazdu!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="model" class="form-label">Model</label>
                   <input type="text" class="form-control" id="model" placeholder="Wprowadź model pojazdu" value="" required>
-                  <div class="invalid-feedback">Valid model name is required.</div>
+                  <div class="invalid-feedback">Wprowadź model pojazdu!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="capitality" class="form-label">Pojemność</label>
                   <input type="text" class="form-control" id="capitality" placeholder="Wprowadź pojemność" value="" required>
-                  <div class="invalid-feedback">Valid capitality is required.</div>
+                  <div class="invalid-feedback">Wprowadź pojemność!</div>
                 </div>
       
                 <div class="col-sm-6 my-4">
                   <label for="production" class="form-label">Rok produkcji</label>
                   <input type="number" min="1950" max="2025" step="1" class="form-control" id="production" placeholder="Wprowadź rok produkcji" value="" required>
-                  <div class="invalid-feedback">Valid production year is required.</div>
+                  <div class="invalid-feedback">Wprowadź rok produkcji!</div>
                 </div>
       
                 <div class="col-sm-6 my-4">
                   <label for="engine" class="form-label">Moc silnika</label>
                   <input type="text" class="form-control" id="engine" placeholder="Wprowadź moc silnika" value="" required>
-                  <div class="invalid-feedback">Valid engine is required.</div>
+                  <div class="invalid-feedback">Wprowadź moc silnika!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="vin" class="form-label">VIN</label>
                   <input type="text" class="form-control" id="vin" placeholder="Wprowadź VIN" value="" required>
-                  <div class="invalid-feedback">Valid vin is required.</div>
+                  <div class="invalid-feedback">Wprowadź VIN!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="mileage" class="form-label">Przebieg</label>
                   <input type="text" class="form-control" id="mileage" placeholder="Podaj przebieg pojazdu" value="" required>
-                  <div class="invalid-feedback">Valid mileage is required.</div>
+                  <div class="invalid-feedback">Podaj przebieg pojazdu!</div>
                 </div>
               </div>
       
@@ -227,7 +227,7 @@
               <div class="row g-3">
                 <div class="col-12">
                   <label for="services" class="form-label">Zakres obsługi</label>
-                  <select id="services" name="services" class="form-control">
+                  <select id="services" name="services" class="form-control" required>
                     <option value="opt0" selected="" disabled="disabled">-- wybierz usługę serwisową --</option>
                     <option value="opt1">PRZEGLĄD SERWISOWY</option>
                     <option value="opt2">PRZEGLĄD OKRESOWY WEDŁUG CZYNNOŚCI KARTY PRZEGLĄDOWEJ PO KONKRETNYM PRZEBIEGU LUB COROCZNY</option>
@@ -242,7 +242,7 @@
                     <option value="opt11">INNE USTERKI</option>
                     </select>
                   <textarea class="col-12 my-4" id="comments" placeholder="Inne uwagi"></textarea>
-                  <div class="invalid-feedback">Please choose.</div>
+                  <div class="invalid-feedback">Wybierz usługę serwisową!</div>
                 </div>
               </div>
 
@@ -252,13 +252,13 @@
                 <div class="col-sm-6 my-4">
                   <label for="day" class="form-label">Dzień</label>
                   <input type="date" class="form-control" id="day" value="" required>
-                  <div class="invalid-feedback">Valid day is required.</div>
+                  <div class="invalid-feedback">Wybierz dzień wizyty!</div>
                 </div>
 
                 <div class="col-sm-6 my-4">
                   <label for="time" class="form-label">Godzina</label>
                   <input type="time" min="08:00" max="19:00" class="form-control" id="time" value="08:00" required>
-                  <div class="invalid-feedback">Valid time is required.</div>
+                  <div class="invalid-feedback">Wybierz godzinę wizyty!</div>
                 </div>
               </div>
 
