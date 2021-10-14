@@ -63,7 +63,7 @@
                   <label for="phone" class="form-label">Telefon</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text">+48</span>
-                    <input type="tel" class="form-control" id="phone" size="15" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="601 102 203" required="required">
+                    <input type="tel" class="form-control" id="phone" size="15" pattern="\d{9}" placeholder="601102203" required="required">
                   </div>
                 </div>
                 
@@ -79,7 +79,7 @@
 
                 <div class="col-sm-6 my-4">
                   <label for="registration" class="form-label">Numer rejestracyjny</label>
-                  <input type="text" class="form-control" id="registration" size="7" placeholder="Wprowadź numer rejestracyjny pojazdu" required="required">
+                  <input type="text" class="form-control" id="registration" size="12" placeholder="Wprowadź numer rejestracyjny pojazdu" required="required">
                 </div>
                 
                 <div class="col-sm-6 my-4">
@@ -208,7 +208,7 @@
       
                 <div class="col-sm-6">
                   <label for="mileage" class="form-label">Przebieg</label>
-                  <input type="text" class="form-control" id="mileage" size="6" placeholder="Podaj przebieg pojazdu" required="required">
+                  <input type="number" class="form-control" id="mileage" placeholder="Podaj przebieg pojazdu" required="required">
                 </div>
               </div>
       
@@ -230,7 +230,7 @@
                     <option value="opt10">NAPRAWA BLACHARSKO - LAKIERNICZA</option>
                     <option value="opt11">INNE USTERKI</option>
                     </select>
-                  <textarea class="col-12 my-4" id="comments" placeholder="Inne uwagi"></textarea>
+                  <textarea class="col-12 my-4" id="comments" maxlength="255" placeholder="Inne uwagi"></textarea>
                 </div>
               </div>
 
@@ -255,11 +255,9 @@
       </main>
       </div>
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2021 Company, Inc. ·</p>
+        <p class="mb-1">&copy; 2021 ·</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
         </ul>
       </footer>
       <!-- JavaScript -->
