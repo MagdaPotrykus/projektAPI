@@ -46,49 +46,45 @@
           <div class="col-md-7 col-lg-8">
             <h2 class="mb-3">Rezerwacja</h2>
             <p class="mb-3">Dane podstawowe</p>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" action="skrypt-rezerwacja.php" method="post" enctype="multipart/form-data" autocomplete="on">
               <div class="row g-3">
       
                 <div class="col-sm-6">
                   <label for="name" class="form-label">Imię</label>
-                  <input type="text" class="form-control" id="name" size="20" placeholder="Wprowadź swoje imię" value="" required>
-                  <div class="invalid-feedback">Wprowadź swoje imię!</div>
+                  <input type="text" class="form-control" id="name" size="20" minlength="1" placeholder="Wprowadź swoje imię" required="required" autofocus>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="surname" class="form-label">Nazwisko</label>
-                  <input type="text" class="form-control" id="surname" size="50" placeholder="Wprowadź swoje nazwisko" value="" required>
-                  <div class="invalid-feedback">Wprowadź swoje nazwisko!</div>
+                  <input type="text" class="form-control" id="surname" size="50" minlength="1" placeholder="Wprowadź swoje nazwisko" required="required">
                 </div>
       
                 <div class="col-12 my-4">
                   <label for="phone" class="form-label">Telefon</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text">+48</span>
-                    <input type="tel" class="form-control" id="phone" size="15" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="601 102 203" required>
-                  <div class="invalid-feedback">Wprowadź swój numer telefonu!</div>
+                    <input type="tel" class="form-control" id="phone" size="15" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" placeholder="601 102 203" required="required">
                   </div>
-                </div>
-      
-                <div class="col-12 my-4">
-                  <p>Dane pojazdu</p>
                 </div>
                 
                 <div class="col-12">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" size="100" placeholder="jan.kowalski@domena.pl" required>
-                  <div class="invalid-feedback">Podaj swój adres email!</div>
+                  <input type="email" class="form-control" id="email" size="100" placeholder="jan.kowalski@domena.pl" required="required">
                 </div>
       
+                <div class="col-12">
+                  <hr class="my-4">
+                  <p>Dane pojazdu</p>
+                </div>
+
                 <div class="col-sm-6 my-4">
                   <label for="registration" class="form-label">Numer rejestracyjny</label>
-                  <input type="text" class="form-control" id="registration" size="7" placeholder="Wprowadź numer rejestracyjny pojazdu" value="" required>
-                  <div class="invalid-feedback">Wprowadź numer rejestracyjny pojazdu!</div>
+                  <input type="text" class="form-control" id="registration" size="7" placeholder="Wprowadź numer rejestracyjny pojazdu" required="required">
                 </div>
                 
                 <div class="col-sm-6 my-4">
                   <label for="mark" class="form-label">Marka</label>
-                  <select id="mark" name="mark" class="form-control" required>
+                  <select id="mark" name="mark" class="form-control" required="required">
                     <option value="" selected="" disabled="disabled">Wybierz markę pojazdu</option>
                     <optgroup label="Popularne marki">
                       <option value="alfa-romeo">Alfa Romeo</option>
@@ -183,43 +179,36 @@
                       <option value="zaz-zaporozec">ZAZ Zaporożec</option>
                   </optgroup>
                   </select>
-                  <div class="invalid-feedback">Wybierz markę pojazdu!</div>
                 </div>
       
                 <div class="col-sm-6">
                   <label for="model" class="form-label">Model</label>
-                  <input type="text" class="form-control" id="model" size="50" placeholder="Wprowadź model pojazdu" value="" required>
-                  <div class="invalid-feedback">Wprowadź model pojazdu!</div>
+                  <input type="text" class="form-control" id="model" size="50" placeholder="Wprowadź model pojazdu" required="required">
                 </div>
       
                 <div class="col-sm-6">
                   <label for="capitality" class="form-label">Pojemność</label>
-                  <input type="text" class="form-control" id="capitality" size="5" placeholder="Wprowadź pojemność" value="" required>
-                  <div class="invalid-feedback">Wprowadź pojemność!</div>
+                  <input type="text" class="form-control" id="capitality" size="5" placeholder="Wprowadź pojemność" required="required">
                 </div>
       
                 <div class="col-sm-6 my-4">
                   <label for="production" class="form-label">Rok produkcji</label>
-                  <input type="number" min="1950" max="2025" step="1" class="form-control" id="production" placeholder="Wprowadź rok produkcji" value="" required>
-                  <div class="invalid-feedback">Wprowadź rok produkcji!</div>
+                  <input type="number" min="1950" max="2025" step="1" class="form-control" id="production" placeholder="Wprowadź rok produkcji" required="required">
                 </div>
       
                 <div class="col-sm-6 my-4">
                   <label for="engine" class="form-label">Moc silnika</label>
-                  <input type="text" class="form-control" id="engine" size="50" placeholder="Wprowadź moc silnika" value="" required>
-                  <div class="invalid-feedback">Wprowadź moc silnika!</div>
+                  <input type="text" class="form-control" id="engine" size="50" placeholder="Wprowadź moc silnika" required="required">
                 </div>
       
                 <div class="col-sm-6">
                   <label for="vin" class="form-label">VIN</label>
-                  <input type="text" class="form-control" id="vin" size="17" placeholder="Wprowadź VIN" value="" required>
-                  <div class="invalid-feedback">Wprowadź VIN!</div>
+                  <input type="text" class="form-control" id="vin" size="17" placeholder="Wprowadź VIN" required="required">
                 </div>
       
                 <div class="col-sm-6">
                   <label for="mileage" class="form-label">Przebieg</label>
-                  <input type="text" class="form-control" id="mileage" size="6" placeholder="Podaj przebieg pojazdu" value="" required>
-                  <div class="invalid-feedback">Podaj przebieg pojazdu!</div>
+                  <input type="text" class="form-control" id="mileage" size="6" placeholder="Podaj przebieg pojazdu" required="required">
                 </div>
               </div>
       
@@ -227,7 +216,7 @@
               <div class="row g-3">
                 <div class="col-12">
                   <label for="services" class="form-label">Zakres obsługi</label>
-                  <select id="services" name="services" class="form-control" required>
+                  <select id="services" name="services" class="form-control" required="required">
                     <option value="" selected="" disabled="disabled">-- wybierz usługę serwisową --</option>
                     <option value="opt1">PRZEGLĄD SERWISOWY</option>
                     <option value="opt2">PRZEGLĄD OKRESOWY WEDŁUG CZYNNOŚCI KARTY PRZEGLĄDOWEJ PO KONKRETNYM PRZEBIEGU LUB COROCZNY</option>
@@ -242,7 +231,6 @@
                     <option value="opt11">INNE USTERKI</option>
                     </select>
                   <textarea class="col-12 my-4" id="comments" placeholder="Inne uwagi"></textarea>
-                  <div class="invalid-feedback">Wybierz usługę serwisową!</div>
                 </div>
               </div>
 
@@ -251,19 +239,16 @@
               <div class="row g-3">
                 <div class="col-sm-6 my-4">
                   <label for="day" class="form-label">Dzień</label>
-                  <input type="date" class="form-control" id="day" value="" required>
-                  <div class="invalid-feedback">Wybierz dzień wizyty!</div>
+                  <input type="date" class="form-control" id="day" required="required">
                 </div>
 
                 <div class="col-sm-6 my-4">
                   <label for="time" class="form-label">Godzina</label>
-                  <input type="time" min="08:00" max="19:00" class="form-control" id="time" value="08:00" required>
-                  <div class="invalid-feedback">Wybierz godzinę wizyty!</div>
+                  <input type="time" min="08:00" max="19:00" class="form-control" id="time" value="08:00" required="required">
                 </div>
               </div>
 
               <button class="btn btn-outline-success my-2 my-sm-0 w-100 btn-lg" type="submit">REZERWUJ</button>
-      
             </form>
           </div>
         </div>
