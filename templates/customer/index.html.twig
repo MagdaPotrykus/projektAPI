@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista rezerwacji{% endblock %}
+
+{% block body %}
+    <h1>Lista rezerwacji</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Nr telefonu</th>
+                <th>Email</th>
+                <th>Nr rejestracyjny</th>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>Pojemność silnika</th>
+                <th>Rok produkcji</th>
+                <th>Moc silnika</th>
+                <th>Numer VIN</th>
+                <th>Przebieg</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.firstname }}</td>
+                <td>{{ customer.lastname }}</td>
+                <td>{{ customer.phone }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.registrationNumber }}</td>
+                <td>{{ customer.brand }}</td>
+                <td>{{ customer.model }}</td>
+                <td>{{ customer.engineCapacity }}</td>
+                <td>{{ customer.productionYear }}</td>
+                <td>{{ customer.enginePower }}</td>
+                <td>{{ customer.vinNumber }}</td>
+                <td>{{ customer.mileage }}</td>
+                <td>
+                    <a href="{{ path('customer_show', {'id': customer.id}) }}">Pokaż</a>
+                    <a href="{{ path('customer_edit', {'id': customer.id}) }}">Edytuj</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">Nie znaleziono żadnych wyników</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('customer_new') }}">Create new</a>
+{% endblock %}

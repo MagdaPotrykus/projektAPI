@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Service index{% endblock %}
+
+{% block body %}
+    <h1>Lista dostępnych usług - pulpit Admina</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nazwa Usługi</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td>{{ service.id }}</td>
+                <td>{{ service.serviceName }}</td>
+                <td>
+                    <a href="{{ path('service_show', {'id': service.id}) }}">Pokaż</a>
+                    <a href="{{ path('service_edit', {'id': service.id}) }}">Edytuj</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Nie znaleziono żadnych wyników</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('service_new') }}">Dodaj nową usługę</a>
+{% endblock %}

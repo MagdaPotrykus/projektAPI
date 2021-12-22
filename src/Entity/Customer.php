@@ -4,6 +4,10 @@ namespace App\Entity;
 
 use App\Repository\CustomerRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
+use Doctrine\Common\Collections\ArrayCollection;
+use Entity\Service;
 
 /**
  * @ORM\Entity(repositoryClass=CustomerRepository::class)
@@ -36,6 +40,66 @@ class Customer
      * @ORM\Column(type="string", length=255)
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $registrationNumber;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $brand;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $model;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $engineCapacity;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $productionYear;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $enginePower;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $vinNumber;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $mileage;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Service")
+     */
+    private $service;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $reservationDate;
+
+    public function __construct()
+    {
+        $this->service = new ArrayCollection();
+    }
+
+    public function getService(): ?ArrayCollection
+    {
+        return $this->service;
+    }
 
     public function getId(): ?int
     {
@@ -88,5 +152,140 @@ class Customer
         $this->email = $email;
 
         return $this;
+    }
+
+    public function getRegistrationNumber(): ?string
+    {
+        return $this->registrationNumber;
+    }
+
+    public function setRegistrationNumber(string $brand): self
+    {
+        $this->registrationNumber = $registrationNumber;
+
+        return $this;
+    }
+
+    public function getBrand(): ?string
+    {
+        return $this->brand;
+    }
+
+    public function setBrand(string $brand): self
+    {
+        $this->brand = $brand;
+
+        return $this;
+    }
+
+    public function getModel(): ?string
+    {
+        return $this->model;
+    }
+
+    public function setModel(string $model): self
+    {
+        $this->model = $model;
+
+        return $this;
+    }
+
+    public function getEngineCapacity(): ?string
+    {
+        return $this->engineCapacity;
+    }
+
+    public function setEngineCapacity(string $engineCapacity): self
+    {
+        $this->engineCapacity = $engineCapacity;
+
+        return $this;
+    }
+
+    public function getProductionYear(): ?string
+    {
+        return $this->productionYear;
+    }
+
+    public function setProductionYear(string $productionYear): self
+    {
+        $this->productionYear = $productionYear;
+
+        return $this;
+    }
+
+    public function getEnginePower(): ?string
+    {
+        return $this->enginePower;
+    }
+
+    public function setEnginePower(string $enginePower): self
+    {
+        $this->enginePower = $enginePower;
+
+        return $this;
+    }
+
+    public function getVinNumber(): ?string
+    {
+        return $this->vinNumber;
+    }
+
+    public function setVinNumber(string $vinNumber): self
+    {
+        $this->vinNumber = $vinNumber;
+
+        return $this;
+    }
+
+    public function getMileage(): ?string
+    {
+        return $this->mileage;
+    }
+
+    public function setMileage(string $mileage): self
+    {
+        $this->mileage = $mileage;
+
+        return $this;
+    }
+
+    public function getReservationDate(): ?string
+    {
+        return $this->reservationDate;
+    }
+
+    public function setReservationDate(string $reservationDate): self
+    {
+        $this->reservationDate = $reservationDate;
+
+        return $this;
+    }
+
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+
+        $metadata->addPropertyConstraint('firstname', new Assert\Length([
+            'min' => 3,
+            'max' => 20,
+            'minMessage' => 'Twoje imię musi zawierać minimum {{ limit }} znaki',
+            'maxMessage' => 'Twoje imię nie może być dłuższe niż {{ limit }} znaków',
+        ]));
+
+        $metadata->addPropertyConstraint('lastname', new Assert\Length([
+            'min' => 3,
+            'max' => 60,
+            'minMessage' => 'Twoje nazwisko musi zawierać minimum {{ limit }} znaki',
+            'maxMessage' => 'Twoje nazwisko nie może być dłuższe niż {{ limit }} znaków',
+        ]));
+
+        $metadata->addPropertyConstraint('productionYear', new Assert\Range([
+            'min' => 1950,
+            'max' => 2025,
+            'notInRangeMessage' => 'Rok produkcji musi być w zakresie {{ min }} -  {{ max }}',
+        ]));
+
+        $metadata->addPropertyConstraint('mileage', new Assert\Positive([
+            'message'=>'Przebieg samochodu musi być większy od 0']));
     }
 }
