@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Customer{% endblock %}
+
+{% block body %}
+    <h1>Rezerwacja wizyty: </h1>
+	<form name="customer" method="post" class="row">
+	
+		<header class="mt-4 h6">
+			Dane podstawowe:
+		</header>
+			
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.firstname) }}
+		{{ form_widget(form.firstname, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.lastname) }}
+		{{ form_widget(form.lastname, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.phone) }}
+		<div class="input-group">
+			<span class="input-group-text">+48</span>
+			{{ form_widget(form.phone, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		</div>
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.email) }}
+		{{ form_widget(form.email, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<header class="mt-4 h6">
+		Dane pojazdu:
+		</header>
+		<div class="col-sm-6 col-md-4 form-group">			
+		{{ form_label(form.registrationNumber) }}
+		{{ form_widget(form.registrationNumber, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 col-md-4 form-group">			
+		{{ form_label(form.brand) }}
+		{{ form_widget(form.brand, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 col-md-4 form-group">			
+		{{ form_label(form.model) }}
+		{{ form_widget(form.model, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 col-md-4 form-group">			
+		{{ form_label(form.engineCapacity) }}
+		{{ form_widget(form.engineCapacity, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 col-md-4 form-group">			
+		{{ form_label(form.productionYear) }}
+		{{ form_widget(form.productionYear, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 col-md-4 form-group">			
+		{{ form_label(form.enginePower) }}
+		{{ form_widget(form.enginePower, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.vinNumber) }}
+		{{ form_widget(form.vinNumber, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.mileage) }}
+		{{ form_widget(form.mileage, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<header class="mt-4 h6">
+		Detale wizyty:
+		</header>
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.service) }}
+		{{ form_widget(form.service, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+		<div class="col-sm-6 form-group">			
+		{{ form_label(form.reservationDate) }}<br>
+		{{ form_widget(form.reservationDate.date, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_widget(form.reservationDate.time, { 'attr': {'class': 'form-control mt-2'} }) }}
+		</div>
+		<div class="mt-4">
+		{{ include('customer/_form.html.twig') }}
+		</div>
+	</form>	
+{% endblock %}
