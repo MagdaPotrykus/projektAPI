@@ -13,21 +13,25 @@
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.firstname) }}
 		{{ form_widget(form.firstname, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.firstname) }}
 		</div>
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.lastname) }}
 		{{ form_widget(form.lastname, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.lastname) }}
 		</div>
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.phone) }}
 		<div class="input-group">
 			<span class="input-group-text">+48</span>
 			{{ form_widget(form.phone, { 'attr': {'class': 'form-control'} }) }}
+			{{ form_errors(form.phone) }}
 		</div>
 		</div>
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.email) }}
 		{{ form_widget(form.email, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.email) }}
 		</div>
 		<header class="mt-4 h6">
 		Dane pojazdu:
@@ -35,34 +39,42 @@
 		<div class="col-sm-6 col-md-4 form-group">			
 		{{ form_label(form.registrationNumber) }}
 		{{ form_widget(form.registrationNumber, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.registrationNumber) }}
 		</div>
 		<div class="col-sm-6 col-md-4 form-group">			
 		{{ form_label(form.brand) }}
 		{{ form_widget(form.brand, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.brand) }}
 		</div>
 		<div class="col-sm-6 col-md-4 form-group">			
 		{{ form_label(form.model) }}
 		{{ form_widget(form.model, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.model) }}
 		</div>
 		<div class="col-sm-6 col-md-4 form-group">			
 		{{ form_label(form.engineCapacity) }}
 		{{ form_widget(form.engineCapacity, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.engineCapacity) }}
 		</div>
 		<div class="col-sm-6 col-md-4 form-group">			
 		{{ form_label(form.productionYear) }}
 		{{ form_widget(form.productionYear, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.productionYear) }}
 		</div>
 		<div class="col-sm-6 col-md-4 form-group">			
 		{{ form_label(form.enginePower) }}
 		{{ form_widget(form.enginePower, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.enginePower) }}
 		</div>
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.vinNumber) }}
 		{{ form_widget(form.vinNumber, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.vinNumber) }}
 		</div>
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.mileage) }}
 		{{ form_widget(form.mileage, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.mileage) }}
 		</div>
 		<header class="mt-4 h6">
 		Detale wizyty:
@@ -70,11 +82,16 @@
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.service) }}
 		{{ form_widget(form.service, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.service) }}
 		</div>
 		<div class="col-sm-6 form-group">			
 		{{ form_label(form.reservationDate) }}<br>
 		{{ form_widget(form.reservationDate.date, { 'attr': {'class': 'form-control'} }) }}
+		{{ form_errors(form.reservationDate.date) }}
+		Godzina wizyty:
 		{{ form_widget(form.reservationDate.time, { 'attr': {'class': 'form-control mt-2'} }) }}
+		{{ form_errors(form.reservationDate.time) }}
+		{{ form_errors(form.reservationDate) }}
 		</div>
 		<div class="mt-4">
 		{{ include('customer/_form.html.twig') }}

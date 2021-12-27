@@ -290,7 +290,9 @@ class Customer
         $metadata->addPropertyConstraint('mileage', new Assert\Positive([
             'message'=>'Przebieg samochodu musi być większy od 0']));
 
-        // $metadata->addPropertyConstraint('reservationDate', new Assert\Positive([
-        //     'message'=>'Przebieg samochodu musi być większy od 0']));    min='1899-01-01'
+        $metadata->addPropertyConstraint('reservationDate', new Assert\Range([
+            'min' => 'now',
+            'max' => '+365 days',
+            'notInRangeMessage'=>'Podana data jest nieprawidłowa']));  
     }
 }

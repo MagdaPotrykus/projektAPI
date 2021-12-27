@@ -100,11 +100,12 @@ class CustomerType extends AbstractType
                 'attr'=> array(
                     'placeholder'=>'Wprowadź pojemność'),
                     ])
-            ->add('productionYear', NumberType::class, [
-                'label'=>'Rok Produkcji: ',
-                'attr'=> array(
-                    'placeholder'=>'Wprowadź rok produkcji'),
-                    ])
+                ->add('productionYear', NumberType::class, [
+                    'label'=>'Rok Produkcji: ',
+                    'attr'=> array(
+                        'placeholder'=>'Wprowadź rok produkcji'),
+                        'invalid_message' => 'Wartość jest nieprawidłowa',
+                        ])
             ->add('enginePower', TextType::class, [
                 'label'=>'Moc silnika: ',
                 'attr'=> array(
@@ -118,7 +119,8 @@ class CustomerType extends AbstractType
             ->add('mileage', NumberType::class, [
                 'label'=>'Przebieg pojazdu: ',
                 'attr'=> array(
-                    'placeholder'=>'Podaj przebieg pojazdu'),
+                    'placeholder'=>'Podaj przebieg pojazdu',
+                    'invalid_message' => 'Wartość jest nieprawidłowa',),
                     ])
             ->add('service',  ChoiceType::class, [
                 'label'=>'Wybierz usługę serwisową: ',
@@ -138,9 +140,14 @@ class CustomerType extends AbstractType
                 ])
             ->add('reservationDate', DateTimeType::class, array(
                 'label'=>'Wybierz datę rezerwacji: ',
-                'date_widget' => 'single_text',
-                'time_widget' => 'single_text',
-                'required' => true,
+                'date_widget' => 'choice',
+                'days' => range(date('d'),date('d')+30),
+                'months' => range(date('m-'),date('m')+5),
+                'years' => range(date('Y'),date('Y')+1) ,
+                'time_widget' => 'choice',
+                'hours' => range(8,16),
+                'minutes' => range(0,0),
+                'invalid_message' => 'Podana data jest nieprawidłowa',
                 ))
         ;
     }
