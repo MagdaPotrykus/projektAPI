@@ -1,20 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ThankYouController!{% endblock %}
+{% block title %}Wizyta zarezewowana!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<h1>Dziękujemy za zarezerwowanie wizyty!</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<p>Dziękujemy za wybranie naszego serwisu. Jesteśmy jednym z wiodących serwisów zamochodowych w polsce. Zajmujemy się wszelkimi naprawami dla wszelkich rodzajów samochodów.
+Bardzo lubimy zajmować się oldtimerami które są naszą pasją i pomagają nam w rozwijaniu naszej wiedzy oraz umiejętności.</p>
+	
+<h1>Z wyrazami szacunku</h1> 
+<h4>prezes firmy</h4>
+<a class="btn btn-success w-100 btn-lg" href="{{ path('home_page') }}">OK</a>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/projekt_serwis/src/Controller/ThankYouController.php'|file_link(0) }}">src/Controller/ThankYouController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/projekt_serwis/templates/thank_you/index.html.twig'|file_link(0) }}">templates/thank_you/index.html.twig</a></code></li>
-    </ul>
-</div>
 {% endblock %}
