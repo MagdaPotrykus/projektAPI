@@ -57,41 +57,53 @@
 		{{ form_errors(form.engineCapacity) }}
 		</div>
 		<div class="col-sm-6 col-md-4 form-group">			
-		{{ form_label(form.productionYear) }}
-		{{ form_widget(form.productionYear, { 'attr': {'class': 'form-control'} }) }}
-		{{ form_errors(form.productionYear) }}
+			{{ form_label(form.productionYear) }}
+			{{ form_widget(form.productionYear, { 'attr': {'class': 'form-control'} }) }}
+			{{ form_errors(form.productionYear) }}
 		</div>
 		<div class="col-sm-6 col-md-4 form-group">			
-		{{ form_label(form.enginePower) }}
-		{{ form_widget(form.enginePower, { 'attr': {'class': 'form-control'} }) }}
-		{{ form_errors(form.enginePower) }}
+			{{ form_label(form.enginePower) }}
+			{{ form_widget(form.enginePower, { 'attr': {'class': 'form-control'} }) }}
+			{{ form_errors(form.enginePower) }}
 		</div>
 		<div class="col-sm-6 form-group">			
-		{{ form_label(form.vinNumber) }}
-		{{ form_widget(form.vinNumber, { 'attr': {'class': 'form-control'} }) }}
-		{{ form_errors(form.vinNumber) }}
+			{{ form_label(form.vinNumber) }}
+			{{ form_widget(form.vinNumber, { 'attr': {'class': 'form-control'} }) }}
+			{{ form_errors(form.vinNumber) }}
 		</div>
 		<div class="col-sm-6 form-group">			
-		{{ form_label(form.mileage) }}
-		{{ form_widget(form.mileage, { 'attr': {'class': 'form-control'} }) }}
-		{{ form_errors(form.mileage) }}
+			{{ form_label(form.mileage) }}
+			{{ form_widget(form.mileage, { 'attr': {'class': 'form-control'} }) }}
+			{{ form_errors(form.mileage) }}
 		</div>
 		<header class="mt-4 h6">
 		Detale wizyty:
 		</header>
 		<div class="col-sm-6 form-group">			
-		{{ form_label(form.service) }}
-		{{ form_widget(form.service, { 'attr': {'class': 'form-control'} }) }}
-		{{ form_errors(form.service) }}
+			{{ form_label(form.service) }}
+			{{ form_widget(form.service, { 'attr': {'class': 'form-control'} }) }}
+			{{ form_errors(form.service) }}
 		</div>
-		<div class="col-sm-6 form-group">			
-		{{ form_label(form.reservationDate) }}<br>
-		{{ form_widget(form.reservationDate.date, { 'attr': {'class': 'form-control'} }) }}
-		{{ form_errors(form.reservationDate.date) }}
-		Godzina wizyty:
-		{{ form_widget(form.reservationDate.time, { 'attr': {'class': 'form-control mt-2'} }) }}
-		{{ form_errors(form.reservationDate.time) }}
-		{{ form_errors(form.reservationDate) }}
+		<div class="col-sm-6 form-group">
+			{{ form_label(form.reservationDate) }}
+			<div class="row">
+				<div class="col-sm-2">
+					{{ form_widget(form.reservationDate.date.day, { 'attr': {'class': 'form-control'} }) }}			
+				</div>
+				<div class="col-sm-2">
+					{{ form_widget(form.reservationDate.date.month, { 'attr': {'class': 'form-control'} }) }}			
+				</div>	
+				<div class="col-sm-2">
+					{{ form_widget(form.reservationDate.date.year, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+				<div class="col-sm-2">
+					{{ form_widget(form.reservationDate.time.hour, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+				<div class="col-sm-2">
+					{{ form_widget(form.reservationDate.time.minute, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+				{{ form_errors(form.reservationDate) }}
+			</div>
 		</div>
 		<div class="mt-4">
 		{{ include('customer/_form.html.twig') }}
