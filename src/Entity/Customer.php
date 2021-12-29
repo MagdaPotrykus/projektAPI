@@ -89,7 +89,10 @@ class Customer
      */
     private $reservationDate;
 
-
+    // public function __toString(): string
+    // {
+    //     return $this->brand.' '.$this->reservationDate;
+    // }
     
     public function getId(): ?int
     {
