@@ -11,13 +11,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/customer")
+ * @Route("/rezerwacja")
  */
 class CustomerController extends AbstractController
 {
-    /**
-     * @Route("/", name="customer_index", methods={"GET"})
-     */
+    
     public function index(CustomerRepository $customerRepository): Response
     {
         return $this->render('customer/index.html.twig', [
@@ -26,7 +24,7 @@ class CustomerController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="customer_new", methods={"GET","POST"})
+     * @Route("/", name="customer_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -48,9 +46,7 @@ class CustomerController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="customer_show", methods={"GET"})
-     */
+
     public function show(Customer $customer): Response
     {
         return $this->render('customer/show.html.twig', [
@@ -58,9 +54,7 @@ class CustomerController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}/edit", name="customer_edit", methods={"GET","POST"})
-     */
+
     public function edit(Request $request, Customer $customer): Response
     {
         $form = $this->createForm(CustomerType::class, $customer);
@@ -78,9 +72,6 @@ class CustomerController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="customer_delete", methods={"POST"})
-     */
     public function delete(Request $request, Customer $customer): Response
     {
         if ($this->isCsrfTokenValid('delete'.$customer->getId(), $request->request->get('_token'))) {
