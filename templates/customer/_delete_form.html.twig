@@ -1,4 +1,0 @@
-<form method="post" action="{{ path('customer_delete', {'id': customer.id}) }}" onsubmit="return confirm('Czy napewno chcesz usunąć rezerwację wizyty?');">
-    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ customer.id) }}">
-    <button class="btn">Usuń</button>
-</form>
