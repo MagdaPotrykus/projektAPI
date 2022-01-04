@@ -1,258 +1,35 @@
 {% extends 'base.html.twig' %}
-{% block title %}Hello OfferController!{% endblock %}
+{% block title %}Oferta{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Autoserwis</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="/docs/5.1/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <!-- oferta -->
-        <hr class="my-4">
-        <div class="container">
-            <main>
-                <div class="row g-5">
-                    <div class="col-md-7 col-lg-8">
-                        <h2 class="mb-3">Oferta</h2>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <img width=730 height=170 src="http://www.autoparts.com.pl/wp-content/uploads/2014/02/naoferte.jpg" alt="Oferta">
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <hr class="my-4">
-                            </div>
-                        </div>
-                        <b>
-                            <p>Instalacja i kalibracja blokady alkoholowej</p>
-                        </b>
-                        <p>Jesteśmy autoryzowanym przedstawicielem producenta blokad alkoholowych. Tak więc instalacja blokady alkoholowej którą wykonujemy posiada wszelkie wymagane certyfikaty i testy. Spełnia ponad to wszystkie wymagania jakie stawia przed nimi prawo i odpowiednie ustawy. Instalowana przez nas blokada po pierwsze, nie integruje w immobilizer, a po drugie, w szynę CAN. Z powodzeniem możemy ją zainstalować w pojazdach fabrycznych, posiadających gwarancję lub w pojazdach, których gwarancja już wygasła.</p>
-                        <p>Aby instalacja blokady alkoholowej spełniała wymagania ustawy, należy zadbać o jej odpowiednią kalibrację. Wykonujemy ją co 12 miesięcy. Pierwszą przed montażem urządzenia, po której kierowca dostaje dokument potwierdzający badanie, który musi wozić ze sobą.</p>
-                        <p>Oferujemy:</p>
-                        <ul>
-                            <li>
-                                <p>zakup blokady</p>
-                            </li>
-                            <li>
-                                <p>dzierżawę blokady alkoholowej w kwocie 80zł netto miesięcznie</p>
-                            </li>
-                            <li>
-                                <p>instalację blokady wraz z niezbędną kalibracją</p>
-                            </li>
-                            <li>
-                                <p>coroczne kalibracje blokad</p>
-                            </li>
-                            <li>
-                                <p>serwis i wsparcie instalowanych blokad alkoholowych</p>
-                            </li>
-                        </ul>
-                        <hr class="my-4">
-                        <b>
-                            <p>Sprawdzenie auta przed zakupem</p>
-                        </b>
-                        <ul>
-                            <li>
-                                <p>Sprawdzenie elementów mechanicznych – układ hamulcowy, zawieszenie, układ jezdny</p>
-                            </li>
-                            <li>
-                                <p>Sprawdzenie komputerem diagnostycznym elektroniki silnika</p>
-                            </li>
-                            <li>
-                                <p>Sprawdzenie grubości lakieru (na życzenie Klienta)</p>
-                            </li>
-                        </ul>
-                        <hr class="my-4">
-                        <b>
-                            <p>Regeneracja zacisków wszystkich marek</p>
-                        </b>
-                        <p>Jedną ze specjalizacji naszej firmy jest naprawa, konserwacja oraz regeneracja zacisków hamulcowych pneumatycznych i hydraulicznych do:</p>
-                        <ul>
-                            <li>
-                                <p>samochodów ciężarowych</p>
-                            </li>
-                            <li>
-                                <p>naczep na osiach</p>
-                            </li>
-                            <li>
-                                <p>autobusów</p>
-                            </li>
-                            <li>
-                                <p>samochodów osobowych i dostawczych</p>
-                            </li>
-                        </ul>
-                        <p>Naprawiamy i regenerujemy zaciski hamulcowe między innymi firm: KNORR, LUCAS, MERITOR, WABCO, PERROT, BENDIX, GIRLING, BREMBO. Wymieniamy płyn hamulcowy i przeprowadzamy test temperatury wrzenia płynu hamulcowego.</p>
-                        <hr class="my-4">
-                        <b>
-                            <p>Pomoc drogowa, holowanie pojazdów</p>
-                        </b>
-                        <p>Jako profesjonalny serwis zapewniamy transport uszkodzonych pojazdów własną auto-lawetą. Holowanie bezpośrednio z miejsca awarii pojazdu do naszego serwisu. Pomoc drogowa i  holowanie samochodów w Poznaniu i okolicach.</p>
-                        <hr class="my-4">
-                        <b>
-                            <p>Naprawa i regeneracja układu wydechowego</p>
-                        </b>
-                        <p>Nasz serwis oferuje klientom usługi związane z naprawą i regeneracją układów wydechowych w samochodach osobowych i dostawczych. Wymieniamy lub naprawiamy takie elementy układów wydechowych jak:</p>
-                        <ul>
-                            <li>
-                                <p>tłumiki</p>
-                            </li>
-                            <li>
-                                <p>katalizatory</p>
-                            </li>
-                            <li>
-                                <p>złącza elastyczne tzw. plecionki</p>
-                            </li>
-                            <li>
-                                <p>rury wydechowe</p>
-                            </li>
-                        </ul>
-                        <p>Współpracujemy z największymi i najlepiej zaopatrzonymi hurtowniami na terenie Poznania, które zapewniają nam codzienne dostawy towaru w konkurencyjnych cenach. Jako nieliczny warsztat samochodowy w Poznaniu specjalizujemy się również w nietypowych naprawach, których nie podejmują się inne serwisy samochodowe. W zakresie napraw układów wydechowych nie ma dla nas rzeczy niemożliwych.</p>
-                        <hr class="my-4">
-                        <b>
-                            <p>Naprawa układów turbosprężarek</p>
-                        </b>
-                        <p>Regeneracja turbosprężarek to jedna z usług naszej firmy. Nasz warsztat samochodowy posiada szerokie doświadczenie w naprawach turbosprężarek. Do naprawy używamy wyłącznie oryginalnych części zamiennych. Dzięki wykorzystaniu najnowocześniejszego parku maszynowego oraz wiedzy i doświadczenia naszych serwisantów, jesteśmy w stanie naprawić niemal każdą turbosprężarkę. Ustawienie właściwych parametrów turbosprężarek posiadających układ zmiennej geometrii (VNT). Każda naprawiana turbosprężarka w końcowym etapie prac przechodzi testy dynamiczne, które połączone są z procesem doważania układu wirującego. Jest to moment, w którym sprawdzana jest skuteczność przeprowadzonej naprawy. Dzięki temu możemy spełnić najsurowsze normy producenta i zagwarantować najwyższą jakoś usług.</p>
-                        <hr class="my-4">
-                        <b>
-                            <p>Naprawa i serwis układu klimatyzacji samochodowej</p>
-                        </b>
-                        <p>Nasz serwis klimatyzacji samochodowej zajmuje się obsługą i naprawą układów klimatyzacji we wszystkich samochodach. Proponujemy miedzy innymi:</p>
-                        <ul>
-                            <li>
-                                <p>wymianę i/lub uzupełnienie czynnika chłodzącego</p>
-                            </li>
-                            <li>
-                                <p>sprawdzenie szczelności instalacji i sprawności podzespołów</p>
-                            </li>
-                            <li>
-                                <p>kontrolę i uzupełnienie oleju w układzie</p>
-                            </li>
-                            <li>
-                                <p>czyszczenie i odgrzybianie systemu wentylacyjnego</p>
-                            </li>
-                            <li>
-                                <p>sprawdzenie wydajności klimatyzacji</p>
-                            </li>
-                            <li>
-                                <p>wymianę filtrów i elementów eksploatacyjnych</p>
-                            </li>
-                            <li>
-                                <p>przegląd po roku</p>
-                            </li>
-                        </ul>
-                        <hr class="my-4">
-                        <b>
-                            <p>Diagnostyka komputerowa i naprawy elektryczne</p>
-                        </b>
-                        <p>W naszym warsztacie samochodowym posiadamy profesjonalne narzędzia pozwalające na przeprowadzenie szczegółowej diagnostyki komputerowej wszystkich układów i elektronicznych systemów montowanych w samochodach popularnych marek.</p>
-                        <p>Profesjonalna komputerowa diagnostyka:</p>
-                        <ul>
-                            <li>
-                                <p>silnika</p>
-                            </li>
-                            <li>
-                                <p>systemów bezpieczeństwa ABS, SRS, ASR, ESP, AIRBAG, EPC itp. komputerów , sterowników silników</p>
-                            </li>
-                            <li>
-                                <p>immobiliserów</p>
-                            </li>
-                            <li>
-                                <p>alarmów samochodowych</p>
-                            </li>
-                            <li>
-                                <p>klimatyzacji</p>
-                            </li>
-                            <li>
-                                <p>magistrali CAN</p>
-                            </li>
-                            <li>
-                                <p>systemów wspomagania parkowania (parktronic)</p>
-                            </li>
-                        </ul>
-                        <p>Naszym klientom oferujemy również:</p>
-                        <ul>
-                            <li>
-                                <p>podstawową diagnostykę komputerową (odczyt i kasowanie błędów)</p>
-                            </li>
-                            <li>
-                                <p>pełną diagnostykę komputerową (sprawdzenie prawidłowości i porównanie wartości i parametrów rzeczywistych wszystkich układów elektronicznych dostępnych w danym pojeździe)</p>
-                            </li>
-                            <li>
-                                <p>manualną diagnostykę – opartą na naszym doświadczeniu – w przypadku starszych modeli samochodów nie posiadających złącza diagnostycznego</p>
-                            </li>
-                            <li>
-                                <p>kasowanie inspekcji i kontrolek informujących o przeglądzie</p>
-                            </li>
-                        </ul>
-                        <hr class="my-4">
-                        <b>
-                            <p>Regeneracja, wymiana rozruszników i alternatorów</p>
-                        </b>
-                        <p>Serwis specjalizuje się w regeneracji rozruszników i alternatorów. Wysoką jakość tych usług gwarantuje wciąż pogłębiana wiedza techniczna oraz odpowiednio wyposażony warsztat elektromechaniczny ukierunkowany na naprawę w/w podzespołów. Na proces regeneracji rozruszników i alternatorów składają się:</p>
-                        <ul>
-                            <li>
-                                <p>demontaż poszczególnych elementów urządzenia</p>
-                            </li>
-                            <li>
-                                <p>dokładna weryfikacja usterek</p>
-                            </li>
-                            <li>
-                                <p>wymiana wyeksploatowanych elementów</p>
-                            </li>
-                            <li>
-                                <p>nadanie regenerowanemu podzespołowi estetycznego wyglądu</p>
-                            </li>
-                            <li>
-                                <p>montaż poszczególnych elementów urządzenia</p>
-                            </li>
-                            <li>
-                                <p>skrupulatny test gotowego wyrobu</p>
-                            </li>
-                        </ul>
-                        <p>Naszym klientom zapewniamy:</p>
-                        <ul>
-                            <li>
-                                <p>rzetelną diagnozę uszkodzonego rozrusznika i alternatora</p>
-                            </li>
-                            <li>
-                                <p>pełen kosztorys ewentualnej naprawy</p>
-                            </li>
-                            <li>
-                                <p>wysoki poziom usług zabezpieczony gwarancją</p>
-                            </li>
-                            <li>
-                                <p>pośrednictwo firmy kurierskiej</p>
-                            </li>
-                        </ul>
-                        <p>Wykonujemy zlecenia dla klientów indywidualnych oraz firm z branży motoryzacyjnej.</p>
-                        <hr class="my-4">
-                        <b>
-                            <p>Naprawa zawieszenia</p>
-                        </b>
-                        <p>Układ zawieszenia odpowiada w naszym samochodzie za komfort jazdy i bezpieczeństwo ale przede wszystkim, to właśnie od niego zależy stateczność, oraz sterowność auta. Bardzo częstym problemem wśród obsługiwanych klientów są awarie elementów zawieszenia. AUTOSERWIS na Poznańskiej 754 oferuje kompleksową naprawę zawieszenia.</p>
-                    </div>
-                </div>
-            </main>
-        </div>
-        <!-- koniec oferty -->
-        <div class="row g-3">
-            <div class="col-12">
-                <hr class="my-4">
-            </div>
-        </div>
-        <!-- JavaScript -->
-        <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="form-validation.js"></script>
-    </body>
-</html>
+
+<div class="">
+    <img class="col-12" src="https://images.prismic.io/cinch/a045c13a-c307-469c-94e5-99a73bf84ac0_CroppedGettyImages-1155250359.jpg?auto=compress%2Cformat" alt="Oferta">
+    <div class="h1">
+		Oferta
+	</div>
+	<div>
+	W naszej ofercie znajdziesz szeroki wachlarz wykonywanych usług. Jest to możliwe dzięki zastosowaniu bogatej gamy przyrządów diagnostycznych.
+	Dzięki wieloletniemu doświadczeniu naszej załogi i nowoczesnemu wyposażeniu, masz pewność prawidłowej obsługi Twojego pojazdu. Obsługujemy samochody osobowe i dostawcze.
+	Nasz formularz zgłoszeniowy posiada podstawowe z naszych usług.
+	Przez formularz możesz się umuwić na: 
+	<ul>
+		<li>PRZEGLĄD SERWISOWY</li>
+		<li>PRZEGLĄD OKRESOWY WEDŁUG CZYNNOŚCI KARTY PRZEGLĄDOWEJ PO KONKRETNYM PRZEBIEGU LUB COROCZNY</li>
+		<li>WYMIANA ROZRZĄDU</li>
+		<li>WYMIANA SPRZĘGŁA</li>
+		<li>NAPRAWA ELEMENTÓW ZAWIESZENIA</li>
+		<li>NAPRAWA PODZESPOŁÓW ELEKTRYCZNYCH</li>
+		<li>WYMIANA OPON</li>
+		<li>WYMIANA KLOCKÓW HAMULCOWYCH LUB TARCZ</li> 
+		<li>WYMIANA OLEJU</li>
+		<li>NAPRAWA BLACHARSKO - LAKIERNICZA</li>
+		<li>INNE USTERKI</li>
+	</ul>
+	Podczas wykonywanej naprawy nasz mechanik kontaktuje się z państwem aby zapytać i przedstawić możliwośc rozszerzenia naszej oferty celem podwyższenia państwa bezpieczeństwa w państwa pojazdach. 
+	Ceny naszych napraw są ustalane bezpośrednio z klientem w zalerzości od kosztu części oraz modelu samochodu.
+	</div>
+</div>
 {% endblock %}
+
+
+                    
