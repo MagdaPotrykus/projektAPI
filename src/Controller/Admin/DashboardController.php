@@ -17,27 +17,25 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return parent::index();
-        // $routeBuilder = $this->get(AdminUrlGenerator::class);
-        // $url = $routeBuilder->setController(CustomerCrudController::class)->generateUrl();
-        // return $this->redirect($url);
+        $routeBuilder = $this->get(AdminUrlGenerator::class);
+        $url = $routeBuilder->setController(CustomerCrudController::class)->generateUrl();
+        return $this->redirect($url);
     }
 
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
             ->setTranslationDomain('pl')
-            ->setTitle('Serwis Samochodowy');
+            ->setTitle('Panel Administracyjny Serwisu Samochodowego');
             
     }
 
     public function configureMenuItems(): iterable
     {
         return[
-            yield MenuItem::linkToDashboard('Panel administracyjny', 'fa fa-home'),
-            yield MenuItem::section('Tu możemy wpisać nazwe sekcji', 'fa fa-home'),
-            yield MenuItem::linktoRoute('Wróć na stronę główną', 'fas fa-campground', 'home_page'),
-            yield MenuItem::linkToCrud('Rezerwacje', 'fas fa-map-marker-alt', Customer::class),
+            yield MenuItem::linkToDashboard('Lista Rezerwacji', 'fa fa-home'),
+            yield MenuItem::section('Linki do strony głównej', 'fas fa-campground'),
+            yield MenuItem::linktoRoute('Wróć na stronę główną serwisu', 'fa fa-home', 'home_page'),
             yield MenuItem::linktoRoute('Złóż wniosek bezpośrednio na stronie', 'fas fa-bell', 'customer_new'),
 
         ];
