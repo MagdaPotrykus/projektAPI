@@ -87,19 +87,19 @@
 		<div class="col-sm-6 form-group">
 			{{ form_label(form.reservationDate) }}
 			<div class="row">
-				<div class="col-sm-2">
+				<div class="col-xl-2 mb-2">
 					{{ form_widget(form.reservationDate.date.day, { 'attr': {'class': 'form-control'} }) }}			
 				</div>
-				<div class="col-sm-2">
+				<div class="col-xl-2 mb-2">
 					{{ form_widget(form.reservationDate.date.month, { 'attr': {'class': 'form-control'} }) }}			
 				</div>	
-				<div class="col-sm-2">
+				<div class="col-xl-2 mb-2">
 					{{ form_widget(form.reservationDate.date.year, { 'attr': {'class': 'form-control'} }) }}
 				</div>
-				<div class="col-sm-2">
+				<div class="col-xl-2  mb-2">
 					{{ form_widget(form.reservationDate.time.hour, { 'attr': {'class': 'form-control'} }) }}
 				</div>
-				<div class="col-sm-2">
+				<div class="col-xl-2  mb-2">
 					{{ form_widget(form.reservationDate.time.minute, { 'attr': {'class': 'form-control'} }) }}
 				</div>
 				{{ form_errors(form.reservationDate) }}
