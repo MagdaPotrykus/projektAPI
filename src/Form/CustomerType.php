@@ -104,7 +104,6 @@ class CustomerType extends AbstractType
                     'label'=>'Rok Produkcji: ',
                     'attr'=> array(
                         'placeholder'=>'Wprowadź rok produkcji'),
-                        'invalid_message' => 'Wartość jest nieprawidłowa',
                         ])
             ->add('enginePower', TextType::class, [
                 'label'=>'Moc silnika: ',
