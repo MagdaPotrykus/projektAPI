@@ -27,7 +27,7 @@ class CustomerCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityLabelInSingular('Rezerwację')
+            ->setEntityLabelInSingular('Rezerwacja')
             ->setEntityLabelInPlural('Zarezerwowane wizyty')
             ->setSearchFields(['id', 'phone', 'email','registrationNumber','service','reservationDate','lastname'])
             ->setDefaultSort(['reservationDate' => 'ASC']);
@@ -76,12 +76,6 @@ class CustomerCrudController extends AbstractCrudController
         yield TextField::new('service','Usługi serwisowe');  
         yield DateTimeField::new('reservationDate','Data rezerwacji');
 
-
-        // if (Crud::PAGE_EDIT === $pageName) {
-        //     yield $createdAt->setFormTypeOption('disabled', true);
-        // } else {
-        //     yield $createdAt;
-        // }
     }
 
     public function configureActions(Actions $actions): Actions
